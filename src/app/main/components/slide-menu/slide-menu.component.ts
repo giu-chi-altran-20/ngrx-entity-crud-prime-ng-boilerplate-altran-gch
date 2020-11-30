@@ -64,7 +64,23 @@ export class SlideMenuComponent implements OnInit, OnDestroy {
           }
         }));
       }
-    }];
+    },
+      {
+        label: 'Coin',
+        icon: 'pi pi-fw pi-user-plus',
+        command: (event$) => {
+          // invoco il router per cambiare pagina
+          this.store$.dispatch(RouterStoreActions.RouterGo({path: ['/coin']}));
+
+          // salvo nello store del menù l'elemento selezionato.
+          this.store$.dispatch(SlideMenuStoreActions.Select({
+            item: {
+              data: {},
+              breadcrumb: ['home', 'coin']
+            }
+          }));
+        }
+      }];
     // const items = [
     //   {
     //     label: 'File',
