@@ -1,4 +1,7 @@
-<button (click)="increment()">Increment</button>
+<!--<button (click)="increment()">Increment</button>-->
+<app-increment (elmPropagationEvent)="increment()"></app-increment>
 <div>Current Count: {{ count$ | async }}</div>
-<button (click)="decrement()">Decrement</button>
-<button (click)="reset()">Reset Counter</button>
+<app-decrement (elmPropagationEvent)="decrement()"></app-decrement>
+<app-reset (elmPropagationEvent)="reset()"></app-reset>
+<!--<button (click)="decrement()">Decrement</button>-->
+<!--<button (click)="reset()">Reset Counter</button>-->

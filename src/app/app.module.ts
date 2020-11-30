@@ -16,9 +16,10 @@ import {BreadcrumbModule} from '@components/breadcrumb/breadcrumb.module';
 import {ClickOutsideModule} from '@core/directive/click-outside-directive';
 import {CardModule} from 'primeng/card';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
