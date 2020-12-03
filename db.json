@@ -23,5 +23,61 @@
       "name": "test 4",
       "value": "test 4"
     }
-  ]
+  ],
+  "car": [{
+    "id": 1,
+    "name": "Giulietta",
+    "brand": "Alfa Romeo",
+    "kilowatt": 100,
+    "doors": 5
+  },
+    {
+      "id": 2,
+      "name": "X1",
+      "brand": "BMW",
+      "kilowatt": 200,
+      "doors": 5
+    },
+    {
+      "id": 3,
+      "name": "Classe A",
+      "brand": "Mercedes",
+      "kilowatt": 300,
+      "doors": 3
+    }],
+  "person": [{
+    "id": 1,
+    "name": "Mario",
+    "surname": "Rossi",
+    "age": 35,
+    "birthdate" : "1985-05-01"
+  },
+    {
+      "id": 2,
+      "name": "Giacomo",
+      "surname": "Rossi",
+      "age": 33,
+      "birthdate" : "1987-01-01"
+    },
+    {
+      "id": 3,
+      "name": "Barbara",
+      "surname": "Rossi",
+      "age": 30,
+      "birthdate" : "1990-01-01"
+    }],
+  "structure" : [{
+    "id": 1,
+    "address": "Via del corso n. 1",
+    "city" : "Rome",
+    "coordinates" : "40,12",
+    "dimensions"  : 300
+  },
+    {
+      "id": 2,
+      "address": "Via dei condotti n. 20",
+      "city" : "Rome",
+      "coordinates" : "41,12",
+      "dimensions"  : 300
+    }]
 }

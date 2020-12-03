@@ -28,7 +28,7 @@ export class CoinEditComponent extends PopUpBaseComponent<Coin> {
   makeFrom(): void {
     this.id = this.fb.control({value: '', disabled: true});
     this.name = this.fb.control('', JValidators.required());
-    this.value = this.fb.control('', [JValidators.required(), JValidators.maxLength(2)]);
+    this.value = this.fb.control('', [JValidators.required(), JValidators.minLength(2) , JValidators.maxLength(5)]);
 
     this.form = this.fb.group({ // form
       id: this.id, // attributo

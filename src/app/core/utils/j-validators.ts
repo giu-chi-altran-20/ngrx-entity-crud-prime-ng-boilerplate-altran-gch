@@ -76,10 +76,11 @@ export class JValidators {
     options.error = optionsA.error || true;
     options.level = optionsA.level || 'error';
     options.type = 'maxlength';
-    options.message = optionsA.message || 'Maximum length not correct {actualLength}/{requiredLength}';
+    options.message = optionsA.message || 'Maximum length not correct {actualLength}/{requiredLength}/{data}';
     return (control: AbstractControl): ValidationErrors | null => {
       const length: number = control.value ? control.value.length : 0;
-      options.context = {requiredLength: maxLength, actualLength: length};
+      const data = new Date().getTime();
+      options.context = {requiredLength: maxLength, actualLength: length, data};
       // options = {...optTemp, ...options};
       return length > maxLength ?
         options :
