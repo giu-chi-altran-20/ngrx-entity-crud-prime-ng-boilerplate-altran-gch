@@ -14,7 +14,7 @@ export const initialState: State = {
   item: {breadcrumb: [], data: null},
   items: [{
     label: 'Counter',
-    icon: 'pi pi-fw pi-user-plus',
+    icon: 'pi pi-star',
     command: (event$) => {
       // invoco il router per cambiare pagina
       event$.item.store$.dispatch(RouterStoreActions.RouterGo({path: ['/counter']}));
@@ -30,7 +30,7 @@ export const initialState: State = {
   },
     {
       label: 'Coin',
-      icon: 'pi pi-fw pi-user-plus',
+      icon: 'pi pi-wallet',
       command: (event$) => {
         // invoco il router per cambiare pagina
         event$.item.store$.dispatch(RouterStoreActions.RouterGo({path: ['/coin']}));
@@ -62,7 +62,7 @@ export const initialState: State = {
     },
     {
       label: 'Car',
-      icon: 'pi pi-fw pi-user-plus',
+      icon: 'pi pi-android',
       command: (event$) => {
         // invoco il router per cambiare pagina
         event$.item.store$.dispatch(RouterStoreActions.RouterGo({path: ['/car']}));
@@ -78,7 +78,7 @@ export const initialState: State = {
     },
     {
       label: 'Structure',
-      icon: 'pi pi-fw pi-user-plus',
+      icon: 'pi pi-ticket',
       command: (event$) => {
         // invoco il router per cambiare pagina
         event$.item.store$.dispatch(RouterStoreActions.RouterGo({path: ['/structure']}));

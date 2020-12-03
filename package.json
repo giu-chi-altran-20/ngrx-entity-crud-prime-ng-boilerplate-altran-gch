@@ -32,7 +32,7 @@
     "json-server": "^0.16.2",
     "ngrx-entity-crud": "^11.2.3",
     "primeflex": "^2.0.0",
-    "primeicons": "^4.0.0",
+    "primeicons": "^4.1.0",
     "primeng": "^10.0.3",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.0",
