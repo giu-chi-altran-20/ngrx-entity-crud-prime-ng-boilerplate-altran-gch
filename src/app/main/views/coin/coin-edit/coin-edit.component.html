@@ -33,6 +33,7 @@
           <div class="p-col">
             <label for="id"><strong>id</strong></label><br>
             <input id="id" name="id" type="text" class="form-control" pInputText [formControl]="id"/>
+            <app-form-error-msg [fc]="id"></app-form-error-msg>
           </div>
         </div>
 
@@ -40,6 +41,7 @@
           <div class="p-col">
             <label for="name"><strong>name</strong></label><br>
             <input id="name" name="name" type="text" class="form-control" pInputText [formControl]="name"/>
+            <app-form-error-msg [fc]="name"></app-form-error-msg>
           </div>
         </div>
 
@@ -47,6 +49,7 @@
           <div class="p-col">
             <label for="value"><strong>value</strong></label><br>
             <input id="value" name="value" type="text" class="form-control" pInputText [formControl]="value"/>
+            <app-form-error-msg [fc]="value"></app-form-error-msg>
           </div>
         </div>
 

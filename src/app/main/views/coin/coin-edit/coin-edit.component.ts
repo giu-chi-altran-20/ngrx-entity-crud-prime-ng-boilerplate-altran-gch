@@ -3,6 +3,7 @@ import {closePopUpAction, PopUpBaseComponent} from '@root-store/router-store/pop
 import {Coin} from '@models/vo/coin';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {CoinStoreActions} from '@root-store/coin-store';
+import {JValidators} from '@core/utils/j-validators';
 
 
 @Component({
@@ -26,8 +27,8 @@ export class CoinEditComponent extends PopUpBaseComponent<Coin> {
 
   makeFrom(): void {
     this.id = this.fb.control({value: '', disabled: true});
-    this.name = this.fb.control('', Validators.required);
-    this.value = this.fb.control('', Validators.required);
+    this.name = this.fb.control('', JValidators.required());
+    this.value = this.fb.control('', [JValidators.required(), JValidators.maxLength(2)]);
 
     this.form = this.fb.group({ // form
       id: this.id, // attributo

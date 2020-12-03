@@ -1,7 +1,7 @@
 import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {RouterStoreActions, RouterStoreSelectors} from '@root-store/router-store/index';
-import {take} from 'rxjs/operators';
+import {take, tap} from 'rxjs/operators';
 import {evalData} from '@core/utils/j-utils';
 import {Subscription} from 'rxjs';
 import {ConfirmationService} from 'primeng/api';
@@ -31,7 +31,7 @@ export class PopUpBaseComponent<T> implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.subscription = this.store$.select(RouterStoreSelectors.selectPopUp).pipe(
-      take(1),
+      take(1), tap(x => console.log('Ecco il mio log bla bla...', x))
     ).subscribe(
       data => this.setState(evalData(() => data as PopUpData<T>, null))
     );

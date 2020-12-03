@@ -13,6 +13,7 @@ import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
 import {SearchModule} from '@components/search/search.module';
 import {PipesModule} from '@core/pipe/pipes.module';
+import {FormErrorMsgModule} from "@core/components/form-error-msg/form-error-msg.module";
 
 @NgModule({
   declarations: [
@@ -21,18 +22,19 @@ import {PipesModule} from '@core/pipe/pipes.module';
     CoinListComponent,
     ButtonNewCoinComponent
   ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    CoinRoutingModule,
-    TableModule,
-    DialogModule,
-    ButtonModule,
-    InputTextModule,
-    PipesModule,
-    SearchModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        CoinRoutingModule,
+        TableModule,
+        DialogModule,
+        ButtonModule,
+        InputTextModule,
+        PipesModule,
+        SearchModule,
+        FormErrorMsgModule
+    ],
   providers: [],
   entryComponents: []
 })
