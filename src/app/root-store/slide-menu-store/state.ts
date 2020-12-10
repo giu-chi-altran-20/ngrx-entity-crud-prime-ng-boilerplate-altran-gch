@@ -12,7 +12,27 @@ export interface State {
 export const initialState: State = {
   open: false,
   item: {breadcrumb: [], data: null},
-  items: [{
+  items: [
+   {
+      label: 'Home',
+      icon: 'fas fa-home',
+     // @ts-ignore
+      roles: ['guest'],
+      command: (event$) => {
+        // invoco il router per cambiare pagina
+        event$.item.store$.dispatch(RouterStoreActions.RouterGo({path: ['/home']}));
+
+        // salvo nello store del menù l'elemento selezionato.
+        event$.item.store$.dispatch(SlideMenuStoreActions.Select({
+          item: {
+            data: {},
+            breadcrumb: ['home']
+          }
+        }));
+
+      }
+    },
+    {
     label: 'Counter',
     icon: 'pi pi-star',
     // @ts-ignore

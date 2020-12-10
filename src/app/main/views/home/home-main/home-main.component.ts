@@ -4,7 +4,7 @@ import {RootStoreState} from '@root-store/index';
 
 @Component({
   selector: 'app-home-main',
-  templateUrl: 'home-main.component.html',
+  template: `<div style="text-align: center"><h2> NGRX-ENTITY-CRUD </h2></div>`,
   styleUrls: ['home-main.component.scss']
 })
 export class HomeMainComponent implements OnInit {

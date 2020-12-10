@@ -33,7 +33,9 @@ export class AuthGuard implements CanActivate, CanActivateChild {
     return this.store$.pipe(
       select(AuthStoreSelectors.selectIsLoggedIn),
       map(selectIsLoggedIn => {
+        console.log('in map of canActivateChild...');
         if (!selectIsLoggedIn) {
+          console.log('in map/if of canActivateChild...');
           this.store$.dispatch(AuthStoreActions.GoToLogin());
         }
         return selectIsLoggedIn;
