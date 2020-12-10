@@ -15,6 +15,8 @@ export const initialState: State = {
   items: [{
     label: 'Counter',
     icon: 'pi pi-star',
+    // @ts-ignore
+    roles: ['roleA'],
     command: (event$) => {
       // invoco il router per cambiare pagina
       event$.item.store$.dispatch(RouterStoreActions.RouterGo({path: ['/counter']}));
@@ -31,6 +33,8 @@ export const initialState: State = {
     {
       label: 'Coin',
       icon: 'pi pi-wallet',
+      // @ts-ignore
+      roles: ['roleB'],
       command: (event$) => {
         // invoco il router per cambiare pagina
         event$.item.store$.dispatch(RouterStoreActions.RouterGo({path: ['/coin']}));
@@ -47,6 +51,8 @@ export const initialState: State = {
     {
       label: 'Person',
       icon: 'pi pi-fw pi-user-plus',
+      // @ts-ignore
+      roles: ['roleC'],
       command: (event$) => {
         // invoco il router per cambiare pagina
         event$.item.store$.dispatch(RouterStoreActions.RouterGo({path: ['/person']}));
@@ -63,6 +69,8 @@ export const initialState: State = {
     {
       label: 'Car',
       icon: 'pi pi-android',
+      // @ts-ignore
+      roles: ['roleA'],
       command: (event$) => {
         // invoco il router per cambiare pagina
         event$.item.store$.dispatch(RouterStoreActions.RouterGo({path: ['/car']}));
@@ -79,6 +87,8 @@ export const initialState: State = {
     {
       label: 'Structure',
       icon: 'pi pi-ticket',
+      // @ts-ignore
+      roles: ['roleA'],
       command: (event$) => {
         // invoco il router per cambiare pagina
         event$.item.store$.dispatch(RouterStoreActions.RouterGo({path: ['/structure']}));
